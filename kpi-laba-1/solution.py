@@ -13,6 +13,12 @@ def main():
         c = int(input('c: '))
         d = int(input('d: '))
 
+        # using a list for checking whether the number is positive.
+        input_list = [a,b,c,d]
+        for x in input_list:
+            if x < 0:
+                raise Exception('Numbers should be positive.')
+
         # checking whether rectangle a,b in the c,d
         if (c+d)<(a+b):
             # rising exception if not
