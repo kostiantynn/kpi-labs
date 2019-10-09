@@ -22,7 +22,7 @@ def main():
         # checking whether rectangle a,b in the c,d
         if a > c and b > d or a > d and b > c:
             # rising exception if not
-            raise Exception('This nubers do not fit in the task.')
+            raise Exception('This numbers do not fit in the task.')
         else:
             # execution first grafic
             rect_angle.rect_angle(a,b,c,d)
