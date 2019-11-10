@@ -1,12 +1,14 @@
 from math import factorial
+# rewrite function for costum input
+def validate_custom_number(tuple_list):
+    # tuple_list of all possible numbers with their digits numbers
+    #  Example: [([array of numbers], their validation), ([...], ...), ...]
 
-def main():
-    # will return the biggest value of possible numbers and a number of digits.
-    mx_value = max([(__validate_number(3,5), '; 3-digits number'), (__validate_number(2,4), '; 2-digits number'), (__validate_number(4,5), '; 4-digits number')])
-    return str(mx_value[0]) + mx_value[1]
+    arr_validate = []
+    for elem in tuple_list:
+        arr_validate.append((__validate_number(elem[1], len(elem[0])), str(elem[1])+'-digit number'))
+    return print('max value-' + str(max(arr_validate)[0]) + '; ' + max(arr_validate)[1])
 
-def __validate_number(k,n):
+
+def __validate_number(k,n): # k-lenght of digits in custom number, n-lenght of number in given sequence
     return factorial(n)/factorial(n-k)
-
-if __name__ == '__main__':
-    main()
